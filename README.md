@@ -57,8 +57,18 @@
     sput_fail_unless(condition, description) - получает условие и описание проверки, возвращает bool значение.
 	
 6) Сборка из консоли:
-	компиляция hex: avr-gcc -c -std=gnu99 -Os -Wall -ffunction-sections -fdata-sections -mmcu=m1284p -DF_CPU=12000000 
-	загрузка hex: avrdude -C /avrdude/avrdude.conf -p m328p -c /dev/ttyusbN -b 19600 -P COM0 -U flash:w:atwatch.ihex:i
+
+	6.1)Компиляция:
+	
+	   hex: avr-gcc -c -std=gnu99 -Os -Wall -ffunction-sections -fdata-sections -mmcu=m1284p -DF_CPU=12000000 
+	
+	6.2)Загрузка:
+	
+	   hex: avrdude -C /avrdude/avrdude.conf -p m328p -c /dev/ttyusbN -b 19600 -P COM0 -U flash:w:atwatch.ihex:i
+	
+	6.3)Запуск тестов:
+	
+	   Тесты запускаются автоматически после  загрузки  в COM-порт.
 	
     
     
